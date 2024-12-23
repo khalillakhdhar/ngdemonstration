@@ -1,4 +1,23 @@
-<div align="center"><h2>Bienvenu à ma page d'accueil angular</h2>
+<div align="center"><h2>{{titre}}</h2>
 <br>
 <a routerLink="../seconde">aller à page 2</a>
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>nom</th>
+      <th>prenom</th>
+      <th>age</th>
+    </tr>
+
+  </thead>
+  <tbody>
+    <tr *ngFor="let us of users; let i=index">
+      <td>{{i+1}}</td>
+      <td>{{us.nom}}</td>
+      <td>{{us.prenom}}</td>
+      <td>{{us.age}}</td>
+    </tr>
+  </tbody>
+</table>
 </div>
